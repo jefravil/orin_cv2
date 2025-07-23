@@ -1,28 +1,34 @@
 # orin_cv2
-Este script automatiza la instalación de OpenCV optimizado para GPUs NVIDIA Jetson, habilitando aceleración por hardware y compatibilidad con procesamiento de video en tiempo real.
+This script automates the installation of OpenCV optimized for NVIDIA Jetson GPUs, enabling hardware acceleration and real-time video processing support.
 
-# README para Compilación de OpenCV en Jetson con JetPack 6.2.1
+# README for Building OpenCV on Jetson with JetPack 6.2.x
 
-Este script compila **OpenCV 4.11.0** con soporte para **CUDA 12.6**, **cuDNN 9.3** y **GStreamer** en dispositivos **NVIDIA Jetson** usando **JetPack 6.2.1** (L4T 36.4.4).
+This script builds **OpenCV 4.11.0** with support for **CUDA 12.6**, **cuDNN 9.3**, and **GStreamer** on **NVIDIA Jetson** devices using **JetPack 6.2.1** (L4T 36.4.4) (modifiable).
 
-## Requisitos
+## Requirements
 
-1. **Jetson con JetPack 6.2.x** (Ubuntu 22.04).
+1. **Jetson with JetPack 6.2.x** (Ubuntu 22.04).
 
-## Instrucciones de Uso
+## Usage Instructions
 
-1. **Actualiza el sistema**:
+1. **Verify or modify the script**:
     ```bash
-   sudo apt update && sudo apt upgrade -y
+    sudo apt update && sudo apt upgrade -y
+    ```
 
-2. **Ejecuta el script**:
+2. **Run the script**:
     ```bash
     ./build_opencv_jetpack621.sh
+    ```
 
-3. **Verifica la versión de OpenCV**:
+3. **Verify the OpenCV version**:
     ```bash
     python3 -c "import cv2; print(cv2.__version__)"
-    
-4. **Verifica el soporte de CUDA:**:
+    ```
+
+4. **Verify CUDA support**:
     ```bash
     python3 -c "import cv2; print(cv2.cuda.getCudaEnabledDeviceCount())"
+    ```
+
+
