@@ -13,7 +13,7 @@ This script builds **OpenCV 4.11.0** with support for **CUDA 12.6**, **cuDNN 9.3
 
 1. **Verify or modify the script**:
     ```bash
-    sudo apt update && sudo apt upgrade -y
+    gedit build_opencv_jetpack621.sh
     ```
 
 2. **Run the script**:
