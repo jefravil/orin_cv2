@@ -30,5 +30,9 @@ This script builds **OpenCV 4.11.0** with support for **CUDA 12.6**, **cuDNN 9.3
     ```bash
     python3 -c "import cv2; print(cv2.cuda.getCudaEnabledDeviceCount())"
     ```
-
+## Principal params for modification
+readonly DEFAULT_VERSION
+install_dependencies
+CUDA_ARCH_BIN=5.3,6.2,7.2,8.7
+CUDNN_VERSION='x.0'
 
