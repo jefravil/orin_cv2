@@ -13,12 +13,12 @@ This script builds **OpenCV 4.11.0** with support for **CUDA 12.6**, **cuDNN 9.3
 
 1. **Verify or modify the script**:
     ```bash
-    gedit build_opencv_jetpack621.sh
+    gedit build_opencv.sh
     ```
 
 2. **Run the script**:
     ```bash
-    ./build_opencv_jetpack621.sh
+    ./build_opencv.sh
     ```
 
 3. **Verify the OpenCV version**:
