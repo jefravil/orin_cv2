@@ -118,7 +118,10 @@ configure () {
         -D WITH_CUDNN=ON
         -D WITH_GSTREAMER=ON
         -D WITH_LIBV4L=ON
-        -D WITH_OPENGL=ON"
+        -D WITH_OPENGL=ON
+        -D GStreamer_INCLUDE_DIR=/usr/include/gstreamer-1.0
+        -D GStreamer_LIBRARIES=/usr/lib/aarch64-linux-gnu/gstreamer-1.0
+        -D GStreamer_VERSION=1.20.3"
 
     if [[ "$1" != "test" ]]; then
         CMAKEFLAGS="${CMAKEFLAGS}
@@ -133,6 +136,7 @@ configure () {
     cd build
     cmake ${CMAKEFLAGS} .. 2>&1 | tee -a configure.log
 }
+
 
 main () {
     local VER=${DEFAULT_VERSION}
