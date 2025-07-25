@@ -18,15 +18,20 @@ This script builds **OpenCV 4.11.0** with support for **CUDA 12.6**, **cuDNN 9.3
 
 2. **Run the script**:
     ```bash
+    chmod +x build_opencv.sh
     ./build_opencv.sh
     ```
-
-3. **Verify the OpenCV version**:
+3. **Run cmake manually in the build directory**:
+    ```bash
+    cd /tmp/build_opencv/opencv/build
+    cmake ..
+    ```
+4. **Verify the OpenCV version**:
     ```bash
     python3 -c "import cv2; print(cv2.__version__)"
     ```
 
-4. **Verify CUDA support**:
+5. **Verify CUDA support**:
     ```bash
     python3 -c "import cv2; print(cv2.cuda.getCudaEnabledDeviceCount())"
     ```
