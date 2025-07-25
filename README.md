@@ -21,19 +21,20 @@ This script builds **OpenCV 4.11.0** with support for **CUDA 12.6**, **cuDNN 9.3
     chmod 755 build_opencv.sh
     ./build_opencv.sh
     ```
-3. **Run cmake manually in the build directory**:
-    ```bash
-    cd /tmp/build_opencv/opencv/build
-    cmake ..
-    ```
-4. **Verify the OpenCV version**:
+
+3. **Verify the OpenCV version**:
     ```bash
     python3 -c "import cv2; print(cv2.__version__)"
     ```
 
-5. **Verify CUDA support**:
+4. **Verify CUDA support**:
     ```bash
     python3 -c "import cv2; print(cv2.cuda.getCudaEnabledDeviceCount())"
+    ```
+5. **(OPTIONAL. IF YOU HAVE PROBLEMS with GStreamer, Check the Cmake and the logs)Run cmake manually in the build directory**:
+    ```bash
+    cd /tmp/build_opencv/opencv/build
+    cmake ..
     ```
 ## Key Parameters for Modification
 readonly DEFAULT_VERSION
