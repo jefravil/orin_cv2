@@ -3,7 +3,7 @@ This script automates the installation of OpenCV optimized for NVIDIA Jetson GPU
 
 # README for Building OpenCV on Jetson with JetPack 6.2.x
 
-This script builds **OpenCV 4.11.0** with support for **CUDA 12.6**, **cuDNN 9.3**, and **GStreamer** on **NVIDIA Jetson** devices using **JetPack 6.2.1** (L4T 36.4.4) (modifiable).
+This script builds **OpenCV 4.11.0** with support for **CUDA 12.6**, **cuDNN 9.3**, and **GStreamer** on **NVIDIA Jetson** devices using **JetPack 6.2.2** (L4T 36.5.0) (modifiable).
 
 ## Requirements
 
