@@ -19,7 +19,8 @@ This script builds **OpenCV 4.11.0** with support for **CUDA 12.6**, **cuDNN 9.3
 2. **Run the script**:
     ```bash
     chmod 755 build_opencv.sh
-    ./build_opencv.sh
+    sudo rm -rf /tmp/build_opencv
+    sudo ./build_opencv.sh
     ```
 
 3. **Verify the OpenCV version**:
