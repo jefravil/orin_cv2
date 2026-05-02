@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Adaptado por Jefferson Ramirez (July 2025) para Jetson con JetPack 6.2.1 (L4T 36.4.4)
+# Adaptado por Jefferson Ramirez para Jetson con JetPack 6.2.2 (L4T 36.5.0)
 # Basado en el script original de Michael de Gans (2019)
 
 set -e
@@ -79,8 +79,8 @@ install_dependencies () {
         libpng-dev \
         libpostproc-dev \
         libswscale-dev \
-        libtbb-dev \
-        libtbb2 \
+	libtbb-dev \
+        libtbb12 \
         libtesseract-dev \
         libtiff-dev \
         libv4l-dev \
@@ -96,8 +96,10 @@ install_dependencies () {
         zlib1g-dev
 }
 
+ 
 configure () {
     local CMAKEFLAGS="
+        
         -D BUILD_EXAMPLES=OFF
         -D BUILD_opencv_python2=OFF
         -D BUILD_opencv_python3=ON
@@ -151,6 +153,11 @@ main () {
     setup
     install_dependencies
     git_source ${VER}
+    
+    # Fix para CMake 3.31+ (JetPack 6.2.2 / L4T 36.5.0)
+    sed -i 's/cmake_minimum_required(VERSION 2\.8\.12\.2)/cmake_minimum_required(VERSION 3.5)/' \
+    /tmp/build_opencv/opencv/cmake/OpenCVGenPkgconfig.cmake
+
 
     if [[ ${DO_TEST} ]]; then
         configure test
